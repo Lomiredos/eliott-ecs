@@ -1,5 +1,5 @@
 #include <doctest/doctest.h>
-#include "../include/ecs/SystemManager.hpp"
+#include "ecs/SystemManager.hpp"
 
 using namespace ee::ecs;
 

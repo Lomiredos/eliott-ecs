@@ -1,5 +1,5 @@
 #include <doctest/doctest.h>
-#include "../include/ecs/ComponentArray.hpp"
+#include "ecs/ComponentArray.hpp"
 
 using namespace ee::ecs;
 

@@ -1,5 +1,5 @@
 #include <doctest/doctest.h>
-#include "../include/ecs/world.hpp"
+#include "ecs/world.hpp"
 
 using namespace ee::ecs;
 

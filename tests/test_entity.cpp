@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
-#include "../include/ecs/EntityManager.hpp"
+#include "ecs/EntityManager.hpp"
 
 using namespace ee::ecs;
 
