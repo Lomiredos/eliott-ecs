@@ -24,6 +24,8 @@ target_include_directories(eliott-ecs PUBLIC
     include/
 )
 
+if(PROJECT_IS_TOP_LEVEL)
+
 # --- Tests ---
 add_executable(tests
     tests/test_entity.cpp
@@ -37,3 +39,5 @@ target_link_libraries(tests PRIVATE
     eliott-ecs
     doctest::doctest
 )
+
+endif()
