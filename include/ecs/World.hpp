@@ -6,16 +6,16 @@
 
 
 namespace ee::ecs {
-
     class World{
+
         private:
+        
         ComponentManager m_compManager;
         EntityManager m_entityManager;
         SystemManager m_sysManager;
         std::unordered_map<EntityID, Signature> m_signatures;
     
         public:
-
         EntityID createEntity() {
             return m_entityManager.createEntity();
 
@@ -32,22 +32,16 @@ namespace ee::ecs {
         template<typename T>
         void addComponent(EntityID _id, T _comp) {
             m_compManager.addComponent(_id, _comp);
-
             m_signatures[_id].set(getComponentID<T>());
-            
             m_sysManager.onEntitySignatureChanged(_id, m_signatures[_id]);
 
         }
 
         template<typename T>
         void removeComponent(EntityID _id) {
-
             m_compManager.removeComponent<T>(_id);
             m_signatures[_id].reset(getComponentID<T>());
-            
             m_sysManager.onEntitySignatureChanged(_id, m_signatures[_id]);
-
-
         }
 
         template<typename T>
