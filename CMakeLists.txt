@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
 project(eliott-ecs VERSION 1.0.0 LANGUAGES CXX)
 
+if(TARGET eliott-ecs)
+    return()
+endif()
+
 # Standard C++20 obligatoire
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
