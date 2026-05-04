@@ -5,11 +5,11 @@ if(TARGET eliott-ecs)
     return()
 endif()
 
-# Standard C++20 obligatoire
+if (PROJECT_IS_TOP_LEVEL)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+endif()
 
-# --- Intégration vcpkg ---
 if(DEFINED ENV{VCPKG_ROOT})
     include($ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake OPTIONAL)
 endif()
