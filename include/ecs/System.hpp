@@ -7,7 +7,6 @@ namespace ee::ecs {
 
     class World;
 
-    
     class System
     {
     public:

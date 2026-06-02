@@ -4,13 +4,7 @@
 #include <typeindex>
 #include "System.hpp"
 
-
-
-
 namespace ee::ecs {
-
-
-
 
     class SystemManager{
 

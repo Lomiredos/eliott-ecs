@@ -12,6 +12,8 @@ namespace ee::ecs {
     class EntityManager {
         public:
         EntityID createEntity();
+        EntityID reserveID();
+        void activateEntity(EntityID _id);
         void DestroyEntity(EntityID _id);
         bool isAlive(EntityID _id);
         size_t getEntityCount() const;
@@ -20,7 +22,4 @@ namespace ee::ecs {
     std::unordered_set<EntityID> m_livingEntities;
     uint32_t m_nextID = 0;
     };
-
-
-
 } // namespace ee::ecs
